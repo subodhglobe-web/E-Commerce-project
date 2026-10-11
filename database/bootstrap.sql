@@ -3,7 +3,7 @@
 DO $$
 BEGIN
   IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname='microapp') THEN
-    CREATE ROLE microapp LOGIN PASSWORD 'microapp123';
+    CREATE ROLE microapp LOGIN PASSWORD 'microapp';
   ELSE
     ALTER ROLE microapp WITH LOGIN PASSWORD 'microapp123';
   END IF;
